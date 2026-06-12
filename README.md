@@ -1,0 +1,1 @@
+# mavix_flutter_v8.2.0
