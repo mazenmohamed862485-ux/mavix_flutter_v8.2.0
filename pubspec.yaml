@@ -1,0 +1,70 @@
+name: mavix_coach
+description: تطبيق Mazen Coach — إدارة التدريب الرياضي المتكامل
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # State management
+  provider: ^6.1.2
+
+  # Local storage
+  sqflite: ^2.3.3+1
+  shared_preferences: ^2.3.3
+  path: ^1.9.0
+
+  # HTTP
+  http: ^1.2.2
+
+  # Charts
+  fl_chart: ^0.68.0
+
+  # UI helpers
+  # FIX: intl مثبّت على 0.19.0 من طرف flutter_localizations — لا تغيّر هذا الرقم
+  intl: ^0.19.0
+  # FIX: استخدام google_fonts بدلاً من ملفات الخطوط المحلية
+  google_fonts: ^6.2.1
+  cached_network_image: ^3.4.1
+  shimmer: ^3.0.0
+  lottie: ^3.1.2
+  font_awesome_flutter: ^10.7.0
+
+  # Utilities
+  connectivity_plus: ^6.0.5
+  uuid: ^4.4.2
+  crypto: ^3.0.3
+  encrypt: ^5.0.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  # FIX: أيقونات التطبيق
+  flutter_launcher_icons: ^0.14.1
+
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: "assets/images/launcher_icon.png"
+  min_sdk_android: 21
+  adaptive_icon_background: "#1A1A2E"
+  adaptive_icon_foreground: "assets/images/launcher_icon.png"
+  remove_alpha_ios: false
+
+flutter:
+  uses-material-design: true
+  generate: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+
+  # FIX: تم حذف إعلانات الخطوط المحلية — نستخدم google_fonts بدلاً منها
+  # الخطوط تُحمَّل تلقائياً من Google Fonts عند أول تشغيل
